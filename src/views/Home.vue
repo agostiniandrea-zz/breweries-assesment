@@ -59,7 +59,7 @@ export default class App extends Vue {
   /* returns a list of breweries filtered by the searchInput value */
   get filteredList() {
     return _.filter(this.breweriesList, (brewery: BreweryModel) =>
-      brewery.name.toLowerCase().startsWith(this.searchInput.toLowerCase())
+      brewery.name.toLowerCase().includes(this.searchInput.toLowerCase())
     );
   }
 
