@@ -19,10 +19,5 @@ const baseRequest: AxiosInstance = axios.create({
 * returns the list of breweries with locations information
 */
 export function getBreweriesRequest() {
-  return baseRequest.get(`/breweries/?withLocations=Y&key=${API_KEY}`, {
-    headers: ({
-      includeToken: true,
-      includeCustomerToken: true
-    })
-  });
+  return baseRequest.get(`/breweries/?withLocations=Y&key=${API_KEY}`);
 }
