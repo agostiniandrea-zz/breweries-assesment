@@ -7,7 +7,10 @@ const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 /* BASE SETUP */
 /*************************************************/
 const baseRequest: AxiosInstance = axios.create({
-  baseURL: `${CORS_PROXY}https://sandbox-api.brewerydb.com/v2`
+  baseURL: `${CORS_PROXY}https://sandbox-api.brewerydb.com/v2`,
+  headers: {
+    'x-requested-with': 'xhr'
+  }
 });
 
 /*************************************************/
